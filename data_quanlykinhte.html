@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ADMIN</title>
+    <link
+      rel="stylesheet"
+      href="bootstrap-5.3.2-dist/bootstrap-5.3.2-dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+    />
+    <link rel="stylesheet" href="css/index.css" />
+    <link
+      rel="stylesheet"
+      href="bootstrap-icons-1.11.2/font/bootstrap-icons.css"
+    />
+    <script src="bootstrap-5.3.2-dist/bootstrap-5.3.2-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/angular.min.js"></script>
+    <script src="https://code.angularjs.org/1.8.2/angular-route.min.js"></script>
+    <script
+      src="https://cdn.tiny.cloud/1/d65420k7p618ngilkrjmefv3dayjqvwk61qiigco4l3mth6f/tinymce/5/tinymce.min.js"
+      referrerpolicy="origin"
+    ></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/froala-editor/4.0.0/css/froala_editor.pkgd.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/froala-editor/4.0.0/js/froala_editor.pkgd.min.js"></script>
+
+    <style>
+      body {
+        padding: 0;
+        margin: 0;
+        background-color: #fff;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      nav {
+        --bs-bg-opacity: 1;
+        background-color: var(--background-navbar);
+      }
+      small {
+        font-family: "Courier New", Courier, monospace;
+        font-size: 28px;
+        font-weight: 800;
+      }
+      header {
+        font-size: 18px;
+        font-weight: 500;
+      }
+      li {
+        margin-left: 15px;
+      }
+      footer {
+        background-color: #0066b3;
+      }
+      span {
+        color: white;
+        font-size: 17px;
+        font-weight: 400;
+      }
+      .bg-title {
+        background-color: var(--background-navbar);
+      }
+      @media (max-width: 768px) {
+        .aside-toggle {
+          display: none;
+        }
+      }
+      @media (min-width: 768px) {
+        .formcc {
+          display: none;
+        }
+      }
+      section {
+        margin-top: 20px;
+      }
+      .header-color{
+        color: var(--background-header);
+      }
+      .content-list{
+        box-shadow: 0 0 3px;
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Banner Header -->
+    <section class="container-fluid">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 mt-2">
+            <a href="#">
+              <img
+                src="https://huit.edu.vn/Images/Documents/N00CT/logo-huit-web-chinh-moi-mau-xanh-02.svg?h=80"
+                class="img-fluid"
+                style="width: 350px"
+            /></a>
+          </div>
+          <div class="col-md-4 mt-4 text-center header-color">
+            <h3><b>TẠP CHÍ CÔNG NGHỆ HUIT</b></h3>
+            <h5><b>HUIT TECHNOLOGY MAGAZINE</b></h5>
+          </div>
+          <div
+            class="col-md-4 mt-5 header-color"
+            style="position: relative; left: 20px"
+          >
+            <h5><b>Cập nhật tin tức mỗi ngày</b></h5>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Banner Header -->
+
+    <!-- Navbar -->
+    <header>
+      <nav class="navbar navbar-expand-lg">
+        <div class="container">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0 fw-bold">
+              <li class="nav-item">
+                <a
+                  class="nav-link active text-white"
+                  aria-current="page"
+                  href="#!/home"
+                  ><i class="bi bi-house-fill"></i> Trang chủ</a
+                >
+              </li>
+
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link text-w text-white"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <i class="bi bi-justify"></i> Danh mục
+                </a>
+                <ul class="dropdown-menu">
+                  <li style="position: relative; left: -7px; width: 300px">
+                    <div class="list-group">
+                      <a
+                        href="#!/quanlykinhke"
+                        class="list-group-item bg-info-subtle"
+                        >Quản lý kinh tế</a
+                      >
+                      <a href="#" class="list-group-item"
+                        >Khoa học - Công nghệ</a
+                      >
+                      <a href="#" class="list-group-item bg-info-subtle"
+                        >Google Scholar</a
+                      >
+                      <a href="#" class="list-group-item"
+                        >TCKH Việt Nam trực tuyến</a
+                      >
+                      <a href="#" class="list-group-item bg-info-subtle"
+                        >HĐ Chức danh Giáo sư</a
+                      >
+                      <a href="#" class="list-group-item"
+                        >Trường ĐH Công Thương</a
+                      >
+                    </div>
+                  </li>
+                  <!-- <li>
+                    <a class="dropdown-item text-black" href="#"
+                      >Các quy định</a
+                    >
+                  </li> -->
+                  <!-- <li><hr class="dropdown-divider text-black" /></li> -->
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#"
+                  ><i class="bi bi-newspaper"></i> Giới thiệu</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#"
+                  ><i class="bi bi-telephone-fill"></i> Liên hệ</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#!/post"
+                  ><i class="bi bi-journals"></i> Gửi bài Online</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#!/login"
+                  ><i class="bi bi-person-fill"></i> Tài khoản</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- End Navbar -->
+
+    <!-- Content -->
+    <div class="wrapper">
+      <section class="mt-3">
+          <div class="container">
+            <div class="row">
+              <article class="col-md-9 bg-white" ng-controller="myCtrl">
+                <div class="text-danger fw-bold mt-2 mb-2 ms-5 body-title fs-3">
+                  QUẢN LÝ KINH TẾ
+                </div>
+                <div class="row border border-1 m-5 mt-1 content-list" ng-repeat="ls in list_bao">
+                  <div class="mt-5 mb-3 col-md-9">
+                    <a href="#" class="text-decoration-none text-black"
+                      ><h5><b>{{ls.Title}}</b></h5></a
+                    >
+                    <p>{{ls.Name}}</p>
+                    <p>Ngày đăng: {{ls.Date}}</p>
+                    <a href="#">{{ls.Author}}</a>
+                  </div>
+                  <div class="col-md-3 mt-5 mb-3">
+                    <img ng-src="image/{{ls.image}}" class="img-fluid" width="200px" />
+                  </div>
+                </div>
+              </article>
+              <aside class="col-md-3 mt-5">
+                <div class="card">
+                  <div class="card-header bg-title">
+                    <strong>TÌM KIẾM</strong>
+                  </div>
+                  <form class="d-flex card-body" role="search">
+                    <input
+                      class="form-control me-2"
+                      type="search"
+                      placeholder="Search"
+                      aria-label="Search"
+                    />
+                    <button class="btn btn-outline-success" type="submit">
+                      Search
+                    </button>
+                  </form>
+                </div>
+                <div class="card mt-5">
+                  <div class="card-header bg-title">
+                    <strong>LIÊN KẾT</strong>
+                  </div>
+                  <div class="list-group">
+                    <a href="#!/quanlykinhke" class="list-group-item bg-info-subtle"
+                      >Quản lý kinh tế</a
+                    >
+                    <a href="#" class="list-group-item">Khoa học - Công nghệ</a>
+                    <a href="#" class="list-group-item bg-info-subtle"
+                      >Google Scholar</a
+                    >
+                    <a href="#" class="list-group-item">TCKH Việt Nam trực tuyến</a>
+                    <a href="#" class="list-group-item bg-info-subtle"
+                      >HĐ Chức danh Giáo sư</a
+                    >
+                    <a href="#" class="list-group-item">Trường ĐH Công Thương</a>
+                  </div>
+                </div>
+                <div class="card mt-5">
+                  <div class="card-header bg-title">
+                    <strong>SỐ MỚI</strong>
+                  </div>
+                  <div class="list-group">
+                    <a href="#" class="list-group-item bg-info-subtle">Mới nhất</a>
+                    <a href="#" class="list-group-item">Xem nhiều nhất</a>
+                    <a href="#" class="list-group-item bg-info-subtle"
+                      >Một tuần trước</a
+                    >
+                    <a href="#" class="list-group-item">Một tháng trước</a>
+                  </div>
+                </div>
+              </aside>
+            </div>
+          </div>
+        </section>
+    <footer class="container-fluid mt-4">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-9 mt-3 row mb-3">
+            <img
+              src="image/logo.png"
+              class="img-fluid col-md-6"
+              style="width: 150px"
+            />
+            <div class="col-md-6 mt-3">
+              <span><b>TẠP CHÍ CÔNG NGHỆ HUIT</b></span> <br />
+              <span>Tại: Trường Đại Học Công Thương</span> <br />
+              <span
+                >Địa chỉ: 140 Đ. Lê Trọng Tấn, Tây Thạnh, Tân Phú, Thành phố
+                Hồ Chí Minh</span
+              >
+            </div>
+          </div>
+          <div class="col-md-3 mt-4">
+            <span>Thành viên: Duc Dau Buoi Nhu Cak</span> <br />
+            <span>Điện thoại: 0987654321</span> <br />
+            <span>Email: ducdb@gmail.com</span> <br />
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+    <script src="js/index.js"></script>
+  </body>
+</html>
